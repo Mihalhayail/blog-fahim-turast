@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import { useState, useEffect } from 'react';
-import { Moon, Sun, Menu, X } from 'lucide-react';
+import Link from "next/link";
+import { useState, useEffect } from "react";
+import { Moon, Sun, Menu, X } from "lucide-react";
 
 export default function Header() {
   const [isDark, setIsDark] = useState(false);
@@ -10,34 +10,36 @@ export default function Header() {
 
   useEffect(() => {
     // Check if dark mode is enabled
-    const isDarkMode = localStorage.getItem('darkMode') === 'true' || 
-                      (!localStorage.getItem('darkMode') && window.matchMedia('(prefers-color-scheme: dark)').matches);
-    
+    const isDarkMode =
+      localStorage.getItem("darkMode") === "true" ||
+      (!localStorage.getItem("darkMode") &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches);
+
     setIsDark(isDarkMode);
-    
+
     if (isDarkMode) {
-      document.documentElement.classList.add('dark');
+      document.documentElement.classList.add("dark");
     } else {
-      document.documentElement.classList.remove('dark');
+      document.documentElement.classList.remove("dark");
     }
   }, []);
 
   const toggleDarkMode = () => {
     const newDarkMode = !isDark;
     setIsDark(newDarkMode);
-    localStorage.setItem('darkMode', newDarkMode.toString());
-    
+    localStorage.setItem("darkMode", newDarkMode.toString());
+
     if (newDarkMode) {
-      document.documentElement.classList.add('dark');
+      document.documentElement.classList.add("dark");
     } else {
-      document.documentElement.classList.remove('dark');
+      document.documentElement.classList.remove("dark");
     }
   };
 
   const navigation = [
-    { name: 'Home', href: '/' },
-    { name: 'Tentang', href: '/about' },
-    { name: 'Kategori', href: '/categories' },
+    { name: "Beranda", href: "/" },
+    { name: "Tentang", href: "/about" },
+    { name: "Kategori", href: "/categories" },
   ];
 
   return (
@@ -45,7 +47,10 @@ export default function Header() {
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="font-bold text-xl text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+          <Link
+            href="/"
+            className="font-bold text-2xl text-primary dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+          >
             FahimTurast
           </Link>
 
