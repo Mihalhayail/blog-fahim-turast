@@ -1,0 +1,84 @@
+import Link from 'next/link';
+import { Github, Twitter, Linkedin, Mail } from 'lucide-react';
+
+export default function Footer() {
+  return (
+    <footer className="bg-gray-50 dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
+      <div className="max-w-6xl mx-auto px-4 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* About Section */}
+          <div>
+            <h3 className="font-bold text-lg text-gray-900 dark:text-white mb-4">
+              FahimTurast
+            </h3>
+            <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+              Blog pribadi yang berbagi pemikiran, tutorial, dan pengalaman dalam dunia teknologi dan pengembangan perangkat lunak.
+            </p>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h3 className="font-bold text-lg text-gray-900 dark:text-white mb-4">
+              Menu Cepat
+            </h3>
+            <nav className="flex flex-col space-y-2">
+              <Link href="/" className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                Home
+              </Link>
+              <Link href="/about" className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                Tentang
+              </Link>
+              <Link href="/categories" className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                Kategori
+              </Link>
+            </nav>
+          </div>
+
+          {/* Social Media */}
+          <div>
+            <h3 className="font-bold text-lg text-gray-900 dark:text-white mb-4">
+              Terhubung
+            </h3>
+            <div className="flex space-x-4">
+              <a 
+                href="#"
+                className="p-2 bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-blue-600 hover:text-white rounded-lg transition-all transform hover:scale-105"
+                aria-label="Github"
+              >
+                <Github className="w-5 h-5" />
+              </a>
+              <a 
+                href="#"
+                className="p-2 bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-blue-600 hover:text-white rounded-lg transition-all transform hover:scale-105"
+                aria-label="Twitter"
+              >
+                <Twitter className="w-5 h-5" />
+              </a>
+              <a 
+                href="#"
+                className="p-2 bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-blue-600 hover:text-white rounded-lg transition-all transform hover:scale-105"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="w-5 h-5" />
+              </a>
+              <a 
+                href="mailto:hello@fahimturast.com"
+                className="p-2 bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-blue-600 hover:text-white rounded-lg transition-all transform hover:scale-105"
+                aria-label="Email"
+              >
+                <Mail className="w-5 h-5" />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Section */}
+        <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700 text-center">
+          <p className="text-gray-600 dark:text-gray-400">
+            © {new Date().getFullYear()} FahimTurast. Dibuat dengan ❤️ menggunakan Next.js
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+}
