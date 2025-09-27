@@ -1,9 +1,9 @@
-import Link from 'next/link';
-import Image from 'next/image';
-import { format } from 'date-fns';
-import { id } from 'date-fns/locale';
-import { Calendar, Tag, Image as ImageIcon } from 'lucide-react';
-import { Post } from '@/types/post';
+import Link from "next/link";
+import Image from "next/image";
+import { format } from "date-fns";
+import { id } from "date-fns/locale";
+import { Calendar, Tag, Image as ImageIcon } from "lucide-react";
+import { Post } from "@/types/post";
 
 interface PostCardProps {
   post: Post;
@@ -11,7 +11,7 @@ interface PostCardProps {
 
 export default function PostCard({ post }: PostCardProps) {
   return (
-    <article className="group bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 hover:shadow-lg hover:border-blue-300 dark:hover:border-blue-600 transition-all duration-300 overflow-hidden">
+    <article className="group bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 hover:shadow-lg hover:border-primary dark:hover:border-blue-600 transition-all duration-300 overflow-hidden">
       <Link href={`/posts/${post.slug}`}>
         {/* Thumbnail */}
         <div className="relative h-48 bg-gray-100 dark:bg-gray-700 overflow-hidden">
@@ -34,7 +34,7 @@ export default function PostCard({ post }: PostCardProps) {
 
         <div className="p-6">
           {/* Title */}
-          <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors leading-tight line-clamp-2">
+          <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-primary dark:group-hover:text-blue-400 transition-colors leading-tight line-clamp-2">
             {post.title}
           </h2>
 
@@ -49,15 +49,15 @@ export default function PostCard({ post }: PostCardProps) {
           <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500 dark:text-gray-400">
             <div className="flex items-center">
               <Calendar className="w-4 h-4 mr-1.5" />
-              {format(new Date(post.date), 'dd MMM yyyy', { locale: id })}
+              {format(new Date(post.date), "dd MMM yyyy", { locale: id })}
             </div>
-            
+
             {post.tags && post.tags.length > 0 && (
               <div className="flex items-center">
                 <Tag className="w-4 h-4 mr-1.5" />
                 <span className="truncate">
-                  {post.tags.slice(0, 2).join(', ')}
-                  {post.tags.length > 2 && '...'}
+                  {post.tags.slice(0, 2).join(", ")}
+                  {post.tags.length > 2 && "..."}
                 </span>
               </div>
             )}
@@ -67,9 +67,9 @@ export default function PostCard({ post }: PostCardProps) {
           {post.tags && post.tags.length > 0 && (
             <div className="flex flex-wrap gap-2 mt-4">
               {post.tags.slice(0, 3).map((tag) => (
-                <span 
+                <span
                   key={tag}
-                  className="px-2 py-1 bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-md text-xs font-medium"
+                  className="px-2 py-1 bg-blue-50 dark:bg-blue-900/30 text-primary dark:text-blue-400 rounded-md text-xs font-medium"
                 >
                   {tag}
                 </span>

@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* About Section */}
           <div>
-            <h3 className="font-bold text-lg text-gray-900 dark:text-white mb-4">
+            <h3 className="font-extrabold text-3xl text-primary dark:text-white mb-4">
               FahimTurast
             </h3>
             <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
@@ -26,19 +26,19 @@ export default function Footer() {
             <nav className="flex flex-col space-y-2">
               <Link
                 href="/"
-                className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-blue-400 transition-colors"
               >
                 Home
               </Link>
               <Link
                 href="/about"
-                className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-blue-400 transition-colors"
               >
                 Tentang
               </Link>
               <Link
                 href="/categories"
-                className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-blue-400 transition-colors"
               >
                 Kategori
               </Link>
@@ -53,28 +53,28 @@ export default function Footer() {
             <div className="flex space-x-4">
               <a
                 href="#"
-                className="p-2 bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-blue-600 hover:text-white rounded-lg transition-all transform hover:scale-105"
+                className="p-2 bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-primary hover:text-white rounded-lg transition-all transform hover:scale-105"
                 aria-label="Github"
               >
                 <Github className="w-5 h-5" />
               </a>
               <a
                 href="#"
-                className="p-2 bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-blue-600 hover:text-white rounded-lg transition-all transform hover:scale-105"
+                className="p-2 bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-primary hover:text-white rounded-lg transition-all transform hover:scale-105"
                 aria-label="Twitter"
               >
                 <Twitter className="w-5 h-5" />
               </a>
               <a
                 href="#"
-                className="p-2 bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-blue-600 hover:text-white rounded-lg transition-all transform hover:scale-105"
+                className="p-2 bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-primary hover:text-white rounded-lg transition-all transform hover:scale-105"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="w-5 h-5" />
               </a>
               <a
-                href="mailto:hello@fahimturast.com"
-                className="p-2 bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-blue-600 hover:text-white rounded-lg transition-all transform hover:scale-105"
+                href="mailto:fahimturast@gmail.com"
+                className="p-2 bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-primary hover:text-white rounded-lg transition-all transform hover:scale-105"
                 aria-label="Email"
               >
                 <Mail className="w-5 h-5" />

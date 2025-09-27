@@ -40,6 +40,8 @@ export default function Header() {
     { name: "Beranda", href: "/" },
     { name: "Tentang", href: "/about" },
     { name: "Kategori", href: "/categories" },
+    { name: "Kelas", href: "https://home.fahimturast.com/kelas.html" },
+    { name: "Kitab", href: "/" },
   ];
 
   return (
@@ -60,7 +62,7 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium"
+                className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-blue-400 transition-colors font-medium"
               >
                 {item.name}
               </Link>

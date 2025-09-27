@@ -5,7 +5,7 @@ import { getAllPosts } from "@/lib/posts";
 import PostCard from "@/components/PostCard";
 import Layout from "@/components/Layout";
 import { Post } from "@/types/post";
-import Hero from "../images/alim-turast.png";
+import Hero from "../public/images/alim-turast.png";
 
 const Header: React.FC = () => {
   return (
@@ -19,7 +19,7 @@ const Header: React.FC = () => {
           />
         </div>
 
-        <div className="w-full mx-20 md:w-1/2 ">
+        <div className="w-full ml-10 md:w-1/2 ">
           <h1 className="text-5xl font-extrabold text-primary dark:text-white mb-6">
             Fahim Turast
           </h1>
@@ -60,14 +60,21 @@ export default async function Home() {
 
       <div className="max-w-6xl mx-auto px-4 py-12">
         {/* Intro Section */}
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-extrabold text-primary dark:text-white mb-6">
+        <div className="ml-10 mb-16">
+          <h2 className="text-3xl font-extrabold text-primary dark:text-white mb-6">
             FahimTurast
-          </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Platform pendidikan yang unggul dan terkemuka dalam membekali thalib
-            dengan penguasaan 'ulumul 'arabiah dan 'aqliyah secara mendalam.
+          </h2>
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl ">
+            Fahim Turast adalah platform pendidikan yang fokus pada ulumul
+            'arabiah dan ' aqliyah. Dengan pembelajaran bertahap (tadarruj) dari
+            mubtadi (dasar) hingga muntahi (lanjutan).
           </p>
+          {/* <div className="text-gray-600 dark:text-gray-300 mt-4 space-y-1">
+            <p>• 📚 Daurah/Talaqqi Ilmu Alat Berseri</p>
+            <p>• 📍 Offline dan Online (E-Course)</p>
+            <p>• 📝 Bertahap, Sistematis dan Mendalam.</p>
+            <p>• ✅ Cocok untuk semua kalangan</p>
+          </div> */}
         </div>
 
         {/* Posts Grid */}
@@ -94,13 +101,13 @@ export default async function Home() {
 }
 
 export const metadata = {
-  title: "FahimTurast - Blog Pribadi",
+  title: "Blog - FahimTurast",
   description:
-    "Blog pribadi FahimTurast - Berbagi pemikiran, tutorial, dan pengalaman dalam dunia teknologi",
+    "Blog FahimTurast - platform pendidikan yang fokus pada ulumul 'arabiah dan ' aqliyah",
   openGraph: {
-    title: "FahimTurast - Blog Pribadi",
+    title: "Blog - FahimTurast",
     description:
-      "Berbagi pemikiran, tutorial, dan pengalaman dalam dunia teknologi",
+      "platform pendidikan yang fokus pada ulumul 'arabiah dan ' aqliyah",
     type: "website",
   },
 };
