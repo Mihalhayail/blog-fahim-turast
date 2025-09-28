@@ -19,7 +19,7 @@ const Header: React.FC = () => {
           />
         </div>
 
-        <div className="w-full ml-10 md:w-1/2 ">
+        <div className="w-full md:w-1/2 ">
           <h1 className="text-5xl font-extrabold text-primary dark:text-white mb-6">
             Fahim Turast
           </h1>
@@ -60,7 +60,7 @@ export default async function Home() {
 
       <div className="max-w-6xl mx-auto px-4 py-12">
         {/* Intro Section */}
-        <div className="ml-10 mb-16">
+        <div className=" mb-16">
           <h2 className="text-3xl font-extrabold text-primary dark:text-white mb-6">
             FahimTurast
           </h2>

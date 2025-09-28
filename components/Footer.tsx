@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Github, Twitter, Linkedin, Mail } from "lucide-react";
+import { Instagram, MessageCircleMore, Youtube, Mail } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -52,25 +52,25 @@ export default function Footer() {
             </h3>
             <div className="flex space-x-4">
               <a
-                href="#"
+                href="https://instagram.com/fahimturast"
                 className="p-2 bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-primary hover:text-white rounded-lg transition-all transform hover:scale-105"
-                aria-label="Github"
+                aria-label="Instagram"
               >
-                <Github className="w-5 h-5" />
+                <Instagram className="w-5 h-5" />
               </a>
               <a
-                href="#"
+                href="https://api.whatsapp.com/send?phone=6281367749342"
                 className="p-2 bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-primary hover:text-white rounded-lg transition-all transform hover:scale-105"
-                aria-label="Twitter"
+                aria-label="Whatsapp"
               >
-                <Twitter className="w-5 h-5" />
+                <MessageCircleMore className="w-5 h-5" />
               </a>
               <a
-                href="#"
+                href="https://youtube.com/@fahimturast?si=8xs13NKLMfdlMkZg"
                 className="p-2 bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-primary hover:text-white rounded-lg transition-all transform hover:scale-105"
-                aria-label="LinkedIn"
+                aria-label="YouTube"
               >
-                <Linkedin className="w-5 h-5" />
+                <Youtube className="w-5 h-5" />
               </a>
               <a
                 href="mailto:fahimturast@gmail.com"
