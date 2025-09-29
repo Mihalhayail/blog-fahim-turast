@@ -41,7 +41,7 @@ export default function Header() {
     { name: "Tentang", href: "/about" },
     { name: "Kategori", href: "/categories" },
     { name: "Kelas", href: "https://home.fahimturast.com/kelas.html" },
-    { name: "Kitab", href: "/" },
+    { name: "Kitab", href: "https://linktr.ee/MaktabahDaurah" },
   ];
 
   return (
@@ -51,7 +51,7 @@ export default function Header() {
           {/* Logo */}
           <Link
             href="/"
-            className="font-bold text-2xl text-primary dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+            className="font-bold text-2xl text-gray-900 dark:text-white hover:text-primary dark:hover:text-blue-400 transition-colors"
           >
             FahimTurast
           </Link>
