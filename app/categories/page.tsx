@@ -1,18 +1,15 @@
-import Layout from '@/components/Layout';
-import { getAllTags, getAllPosts } from '@/lib/posts';
-import Link from 'next/link';
-import { Tag, Hash } from 'lucide-react';
-import { Metadata } from 'next';
+import Layout from "@/components/Layout";
+import { getAllTags, getAllPosts } from "@/lib/posts";
+import Link from "next/link";
+import { Tag, Hash } from "lucide-react";
+import { Metadata } from "next";
 
 export default async function Categories() {
-  const [tags, posts] = await Promise.all([
-    getAllTags(),
-    getAllPosts()
-  ]);
+  const [tags, posts] = await Promise.all([getAllTags(), getAllPosts()]);
 
   // Hitung jumlah post untuk setiap tag
   const tagCounts = tags.reduce((acc, tag) => {
-    acc[tag] = posts.filter(post => post.tags?.includes(tag)).length;
+    acc[tag] = posts.filter((post) => post.tags?.includes(tag)).length;
     return acc;
   }, {} as Record<string, number>);
 
@@ -21,11 +18,11 @@ export default async function Categories() {
       <div className="max-w-6xl mx-auto px-4 py-12">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold text-primary dark:text-white mb-6">
             Kategori & Tag
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Jelajahi artikel berdasarkan topik dan kategori yang menarik minat Anda
+            Jelajahi artikel berdasarkan topik dan kategori yang kamu minati
           </p>
         </div>
 
@@ -35,16 +32,18 @@ export default async function Categories() {
             <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">
               {posts.length}
             </div>
-            <div className="text-gray-600 dark:text-gray-400">Total Artikel</div>
+            <div className="text-gray-600 dark:text-gray-400">
+              Total Artikel
+            </div>
           </div>
-          
+
           <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-200 dark:border-gray-700 text-center">
             <div className="text-3xl font-bold text-green-600 dark:text-green-400 mb-2">
               {tags.length}
             </div>
             <div className="text-gray-600 dark:text-gray-400">Total Tag</div>
           </div>
-          
+
           <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-200 dark:border-gray-700 text-center">
             <div className="text-3xl font-bold text-orange-600 dark:text-orange-400 mb-2">
               {new Date().getFullYear()}
@@ -59,13 +58,14 @@ export default async function Categories() {
             <Tag className="w-6 h-6 mr-3 text-blue-600 dark:text-blue-400" />
             Semua Tag
           </h2>
-          
+
           {tags.length > 0 ? (
             <div className="flex flex-wrap gap-3">
               {tags.map((tag) => {
                 const count = tagCounts[tag];
-                const sizeClass = count > 3 ? 'text-lg' : count > 1 ? 'text-base' : 'text-sm';
-                
+                const sizeClass =
+                  count > 3 ? "text-lg" : count > 1 ? "text-base" : "text-sm";
+
                 return (
                   <Link
                     key={tag}
@@ -95,7 +95,7 @@ export default async function Categories() {
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
             Kategori Populer
           </h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {tags.slice(0, 6).map((tag) => (
               <Link
@@ -126,10 +126,12 @@ export default async function Categories() {
 }
 
 export const metadata: Metadata = {
-  title: 'Kategori & Tag - FahimTurast',
-  description: 'Jelajahi artikel berdasarkan kategori dan tag. Temukan topik yang menarik minat Anda.',
+  title: "Kategori & Tag - FahimTurast",
+  description:
+    "Jelajahi artikel berdasarkan kategori dan tag. Temukan topik yang menarik minat Anda.",
   openGraph: {
-    title: 'Kategori & Tag - FahimTurast',
-    description: 'Jelajahi artikel berdasarkan kategori dan tag. Temukan topik yang menarik minat Anda.',
+    title: "Kategori & Tag - FahimTurast",
+    description:
+      "Jelajahi artikel berdasarkan kategori dan tag. Temukan topik yang menarik minat Anda.",
   },
 };
